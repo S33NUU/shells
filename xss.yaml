@@ -1,0 +1,6 @@
+swagger: '2.0'
+info:
+  title: "<img src=x onerror=alert('YAML-XSS')>"
+  version: "1.0.0"
+  description: "<img src=x onerror=alert('YAML-Description')>"
+paths: {}
