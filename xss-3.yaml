@@ -1,5 +1,5 @@
 {
   "info": {
-    "title": "<img src=x onerror='setTimeout(\"alert(\\\"XSS\\\")\",1)'>"
+    "title": "<svg><script>alert('XSS-SVG')</script>"
   }
 }
