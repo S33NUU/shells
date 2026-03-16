@@ -1,80 +1,11 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "API Title - <svg onload=alert('XSS-Title')>",
-    "description": "<svg onload=alert(document.domain)>",
+    "title": "<svg><script>alert('XSS-Title')</script>",
+    "description": "<svg><script>alert(document.domain)</script>",
     "version": "1.0.0",
-    "termsOfService": "<svg onload=alert('TOS-XSS')>",
-    "contact": {
-      "name": "<svg onload=alert('Contact-XSS')>",
-      "email": "test@test.com",
-      "url": "javascript:alert('Contact-URL-XSS')"
-    },
-    "license": {
-      "name": "<svg onload=alert('License-XSS')>",
-      "url": "javascript:alert('License-URL-XSS')"
-    }
+    "termsOfService": "<svg><script>alert('TOS-XSS')</script>"
   },
-  "host": "<svg onload=alert('Host-XSS')>",
-  "basePath": "<svg onload=alert('BasePath-XSS')>/",
-  "tags": [
-    {
-      "name": "<svg onload=alert('Tag-XSS')>",
-      "description": "<svg onload=alert('TagDesc-XSS')>"
-    }
-  ],
-  "paths": {
-    "/test": {
-      "get": {
-        "summary": "<svg onload=alert('Summary-XSS')>",
-        "description": "<svg onload=alert('Description-XSS')>",
-        "operationId": "<svg onload=alert('OperationId-XSS')>",
-        "produces": ["application/json"],
-        "responses": {
-          "200": {
-            "description": "<svg onload=alert('Response-XSS')>",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "data": {
-                  "type": "string",
-                  "example": "<svg onload=alert('Example-XSS')>"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "<svg onload=alert('Error-XSS')>"
-          }
-        }
-      },
-      "post": {
-        "summary": "<div onmouseover=alert('Hover-XSS')>Hover over me</div>",
-        "description": "<iframe srcdoc='<script>alert(\"Iframe-XSS\")</script>'>"
-      }
-    },
-    "/xss": {
-      "get": {
-        "summary": "XSS Test",
-        "description": "<math><mtext><h1><a><svg onload=alert('MathML-XSS')></a></h1></mtext></math>"
-      }
-    }
-  },
-  "definitions": {
-    "XSS": {
-      "type": "object",
-      "title": "<svg onload=alert('Definition-Title-XSS')>",
-      "description": "<svg onload=alert('Definition-Desc-XSS')>",
-      "properties": {
-        "test": {
-          "type": "string",
-          "description": "<svg onload=alert('Property-XSS')>"
-        }
-      }
-    }
-  },
-  "externalDocs": {
-    "description": "<svg onload=alert('ExternalDocs-XSS')>",
-    "url": "javascript:alert('ExternalDocs-URL-XSS')"
-  }
+  "host": "<svg><script>alert('Host-XSS')</script>",
+  "basePath": "/"
 }
