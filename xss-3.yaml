@@ -1,41 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<svg><script>alert('XSS-Title')</script>",
+    "title": "<img src=x onerror=alert('XSS-Title')>",
     "description": "<img src=x onerror=alert('XSS-Desc')>",
-    "version": "1.0.0",
-    "termsOfService": "<iframe srcdoc='<script>top.alert(\"XSS-TOS\")</script>'>",
-    "contact": {
-      "name": "<svg onload=alert('XSS-Contact')>",
-      "email": "test@test.com",
-      "url": "javascript:alert('XSS-Contact-URL')"
-    },
-    "license": {
-      "name": "<embed src=javascript:alert('XSS-License')>",
-      "url": "javascript:alert('XSS-License-URL')"
-    }
+    "version": "1.0.0"
   },
-  "host": "<object data=javascript:alert('XSS-Host')>",
-  "basePath": "/",
-  "tags": [
-    {
-      "name": "<img src=x onerror='setTimeout(\"alert(\\\"XSS-Tag\\\")\",100)'>",
-      "description": "<svg><script>alert('XSS-TagDesc')</script>"
-    }
-  ],
-  "paths": {
-    "/test": {
-      "get": {
-        "summary": "<a href='javascript:alert(\"XSS-Summary\")'>Click me</a>",
-        "description": "<iframe srcdoc='<script>top.alert(\"XSS-Desc\")</script>'>",
-        "operationId": "<img src=x onerror=alert('XSS-OpId')>",
-        "produces": ["application/json"],
-        "responses": {
-          "200": {
-            "description": "<svg onload=alert('XSS-Response')>"
-          }
-        }
-      }
-    }
-  }
+  "paths": {}
 }
