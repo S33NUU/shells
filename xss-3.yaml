@@ -1,5 +1,5 @@
 {
   "info": {
-    "title": "<script src='data:text/javascript,alert(\"XSS-Base64\")'>"
+    "description": "<img src=x onerror='setTimeout(\"alert(\\\"XSS\\\")\", 100)'>"
   }
 }
