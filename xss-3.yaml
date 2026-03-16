@@ -1,6 +1,56 @@
-swagger: "2.0"
+swagger: '2.0'
 info:
-  title: "XSS Test"
-  description: "<img src=x onerror=alert('XSS-YAML')>"
-  version: "1.0.0"
-paths: {}
+  title: <img src=x onerror=alert('XSS-Title')>
+  description: <img src=x onerror=alert('XSS-Description')>
+  version: 1.0.0
+  termsOfService: <img src=x onerror=alert('XSS-TOS')>
+  contact:
+    name: <img src=x onerror=alert('XSS-Contact-Name')>
+    email: test@example.com
+    url: http://example.com
+  license:
+    name: <img src=x onerror=alert('XSS-License-Name')>
+    url: http://example.com
+host: <img src=x onerror=alert('XSS-Host')>
+basePath: /
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+tags:
+  - name: <img src=x onerror=alert('XSS-Tag-Name')>
+    description: <img src=x onerror=alert('XSS-Tag-Description')>
+paths:
+  /test:
+    get:
+      summary: <img src=x onerror=alert('XSS-Summary')>
+      description: <img src=x onerror=alert('XSS-Path-Description')>
+      operationId: <img src=x onerror=alert('XSS-OperationId')>
+      parameters:
+        - name: <img src=x onerror=alert('XSS-Parameter-Name')>
+          in: query
+          description: <img src=x onerror=alert('XSS-Parameter-Description')>
+          required: false
+          type: string
+      responses:
+        200:
+          description: <img src=x onerror=alert('XSS-Response-200')>
+        400:
+          description: <img src=x onerror=alert('XSS-Response-400')>
+definitions:
+  TestObject:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: <img src=x onerror=alert('XSS-Property-Description')>
+      name:
+        type: string
+        example: <img src=x onerror=alert('XSS-Example')>
+    title: <img src=x onerror=alert('XSS-Definition-Title')>
+    description: <img src=x onerror=alert('XSS-Definition-Description')>
+externalDocs:
+  description: <img src=x onerror=alert('XSS-ExternalDocs')>
+  url: http://example.com
