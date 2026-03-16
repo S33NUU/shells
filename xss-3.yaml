@@ -1,6 +1,5 @@
 {
-  "externalDocs": {
-    "description": "<a href='javascript:alert(\"XSS-Link\")'>Click me</a>",
-    "url": "javascript:alert('XSS-External')"
+  "info": {
+    "title": "<script src='data:text/javascript,alert(\"XSS-Base64\")'>"
   }
 }
