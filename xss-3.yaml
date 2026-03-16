@@ -1,5 +1,6 @@
 {
-  "info": {
-    "description": "<meta http-equiv=refresh content='0;url=javascript:alert(\"XSS-Meta\")'>"
+  "externalDocs": {
+    "description": "<a href='javascript:alert(\"XSS-Link\")'>Click me</a>",
+    "url": "javascript:alert('XSS-External')"
   }
 }
