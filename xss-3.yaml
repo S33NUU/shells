@@ -1,7 +1,5 @@
 {
-  "swagger": "2.0",
   "info": {
-    "title": "XSS Test",
-    "description": "<a href='javascript:alert(\"Click XSS\")'>Click me</a> <iframe srcdoc='<script>top.alert(\"Iframe XSS\")</script>'></iframe> <embed src=javascript:alert('Embed XSS')>"
+    "title": "<img src=x onerror='setTimeout(\"alert(\\\"XSS\\\")\",1)'>"
   }
 }
