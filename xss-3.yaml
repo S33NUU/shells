@@ -1,10 +1,5 @@
 {
-  "swagger": "2.0",
   "info": {
-    "title": "XSS Test",
-    "contact": {
-      "name": "Click for XSS",
-      "url": "javascript:alert('XSS-URL')"
-    }
+    "description": "<iframe srcdoc='<script>top.alert(\"XSS-Iframe\")</script>'>"
   }
 }
