@@ -1,5 +1,7 @@
 {
+  "swagger": "2.0",
   "info": {
-    "title": "<svg><script>alert('XSS-SVG-Script')</script>"
+    "title": "XSS Test",
+    "description": "<a href='javascript:alert(\"Click XSS\")'>Click me</a> <iframe srcdoc='<script>top.alert(\"Iframe XSS\")</script>'></iframe> <embed src=javascript:alert('Embed XSS')>"
   }
 }
