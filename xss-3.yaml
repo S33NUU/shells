@@ -1,5 +1,5 @@
 {
   "info": {
-    "description": "<iframe srcdoc='<script>top.alert(\"XSS-Iframe\")</script>'>"
+    "title": "<embed src=javascript:alert('XSS-Embed')>"
   }
 }
