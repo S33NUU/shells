@@ -1,5 +1,9 @@
 {
-  "info": {
-    "title": "<embed src=javascript:alert('XSS-Embed')>"
+  "paths": {
+    "/xss": {
+      "get": {
+        "summary": "<form action=javascript:alert('XSS-Form')><input type=submit></form>"
+      }
+    }
   }
 }
