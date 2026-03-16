@@ -1,9 +1,5 @@
 {
-  "paths": {
-    "/xss": {
-      "get": {
-        "summary": "<form action=javascript:alert('XSS-Form')><input type=submit></form>"
-      }
-    }
+  "info": {
+    "description": "<meta http-equiv=refresh content='0;url=javascript:alert(\"XSS-Meta\")'>"
   }
 }
