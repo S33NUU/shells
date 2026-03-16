@@ -1,9 +1,6 @@
-{
-  "swagger": "2.0",
-  "info": {
-    "title": "<img src=x onerror=alert('XSS-Title')>",
-    "description": "<img src=x onerror=alert('XSS-Desc')>",
-    "version": "1.0.0"
-  },
-  "paths": {}
-}
+swagger: "2.0"
+info:
+  title: "XSS Test"
+  description: "<img src=x onerror=alert('XSS-YAML')>"
+  version: "1.0.0"
+paths: {}
