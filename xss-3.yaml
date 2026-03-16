@@ -1,5 +1,10 @@
 {
+  "swagger": "2.0",
   "info": {
-    "title": "<img src=x onerror='setTimeout(()=>alert(\"XSS\"),100)'>"
+    "title": "XSS Test",
+    "contact": {
+      "name": "Click for XSS",
+      "url": "javascript:alert('XSS-URL')"
+    }
   }
 }
