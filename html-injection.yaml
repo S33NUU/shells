@@ -1,0 +1,16 @@
+swagger: '2.0'
+info:
+  title: "HTML Injection Test"
+  description: "
+    <div style='border: 2px solid red; padding: 10px;'>
+      <h2>HTML INJECTION SUCCESSFUL!</h2>
+      <p style='color: green;'>✓ Bold text: <b>BOLD</b></p>
+      <p style='color: blue;'>✓ Italic: <i>ITALIC</i></p>
+      <p style='color: purple;'>✓ Colored text</p>
+      <p style='font-size: 20px;'>✓ Large text</p>
+      <table border='1'><tr><td style='background-color: yellow;'>✓ Table with styling</td></tr></table>
+      <p>→ This proves HTML injection works!</p>
+    </div>
+  "
+  version: "1.0.0"
+paths: {}
