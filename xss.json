@@ -1,0 +1,40 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Title",
+    "description": "<img src=x onerror=alert(document.domain)>",
+    "version": "1.0.0",
+    "termsOfService": "<img src=x onerror=alert('TOS-XSS')>",
+    "contact": {
+      "name": "<img src=x onerror=alert('Contact-XSS')>",
+      "email": "test@test.com"
+    },
+    "license": {
+      "name": "<img src=x onerror=alert('License-XSS')>",
+      "url": "http://example.com"
+    }
+  },
+  "host": "<img src=x onerror=alert('Host-XSS')>",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "<img src=x onerror=alert('Tag-XSS')>",
+      "description": "Tag description"
+    }
+  ],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "<img src=x onerror=alert('Summary-XSS')>",
+        "description": "<img src=x onerror=alert('Description-XSS')>",
+        "operationId": "<img src=x onerror=alert('OperationId-XSS')>",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "<img src=x onerror=alert('Response-XSS')>"
+          }
+        }
+      }
+    }
+  }
+}
